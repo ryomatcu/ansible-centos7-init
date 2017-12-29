@@ -1,0 +1,14 @@
+---
+- name: Initial setup for CentOS7 with Ansible.
+  hosts: mycentos
+  su: true
+  remote_user: ops
+  su_user: root
+  roles:
+    - install-update-packages
+    - setting-locale
+    - setting-timezone
+    - install-httpd
+  vars:
+    - locale: ja_JP.utf8
+    - timezone: Asia/Tokyo

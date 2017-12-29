@@ -1,0 +1,10 @@
+---
+- name: upgrade all packages
+  yum:
+    name: '*'
+    state: latest
+
+- name: install the 'Development tools' package group
+  yum:
+    name: "@Development tools"
+    state: present

@@ -1,0 +1,3 @@
+---
+- name: set loclale 
+  shell: localectl set-locale LANG={{ locale }}
